@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Javascript</title>
+
+</head>
+
+<body>
+
+    <form name="myform" method="post" action="#" onsubmit="return validateform()" > 
+
+      Username: <input type="text" name="name"><br/>  
+
+      Password: <input type="password" name="password"><br/>  
+
+      <input type="submit" value="Login">  
+
+    </form>
+
+  
+
+<script>  
+  function validateform(){  
+
+  var name = document.myform.name.value;  
+  var password = document.myform.password.value;  
+  
+  if (name == null || name == ""){  
+
+    alert("username can't be emplty");  
+    return false;  
+  }else if( password == "" ){  
+    
+    alert("Password can't be emplty");  
+    return false;  
+
+    }else{
+      alert('your login has been successful');
+    }  
+  }  
+
+</script>
+
+
+
+</body>
+
+</html>

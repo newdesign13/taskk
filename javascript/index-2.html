@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+  <form name="myForm" action="https://www.facebook.com/new.webdesign1/" method="post" onsubmit = "return Login()" >
+
+    Username <input type="text" name="username" id="username"><br>
+
+    Password <input type="password" name="password" id="password"><br>
+
+    <input type="submit" value="Login">
+  </form>
+
+  <script>
+
+    function Login() {
+
+      var username = document.myForm.username.value;
+      var password = document.myForm.password.value;
+
+        if ( username == '') {
+
+          document.getElementById('username').style.border = '2px solid red';
+            return false;
+      
+        }else{
+          document.getElementById('username').style.border = '2px solid green';
+        } 
+      
+      
+        if( password.length > 5 ){
+
+          document.getElementById('password').style.border = '2px solid red';
+          return false;
+
+          }else if( password == '' ){
+
+          document.getElementById('password').style.border = '2px solid red';
+            return false;
+
+        }else{
+          alert(' everything is good , u can go to your profile..')
+        }
+        
+    }
+  </script>
+
+</body>
+</html>
